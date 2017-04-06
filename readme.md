@@ -14,8 +14,6 @@ Things to change or improve
 <code>1. To imitate</code><br />
 <code>Synonyms: resemble, look like, have the appearance of</code>
 
- This version contains modes for the homescreen to make it look more like the previous version on Jarvis.
-
 As its name implies, this skin owes much to the Kodi community. In no particular order, I'd like to thank the following individuals:
 
 - BigNoid, for developing Aeon Nox, on which this skin is based.

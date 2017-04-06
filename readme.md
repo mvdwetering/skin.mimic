@@ -1,9 +1,18 @@
+***
+This version contains mods for the homescreen to make it look more like the previous version on Jarvis.
+Even though I really like the media views of Mimic I am not a fan of the homescreen changes with Mimic 5.
+
+Things to change or improve
+* Add a Shift view for the home screen
+  * Does not cover the background fanart as much as the new widgets
+  * Does not have the weird looking boxes
+
+***
+
 ![banner] (http://i.imgur.com/VfxG5Nw.jpg)
 <h1>mim·ic</h1>
 <code>1. To imitate</code><br />
 <code>Synonyms: resemble, look like, have the appearance of</code>
-
- This version contains modes for the homescreen to make it look more like the previous version on Jarvis.
 
 As its name implies, this skin owes much to the Kodi community. In no particular order, I'd like to thank the following individuals:
 
@@ -21,7 +30,6 @@ Support Kodi by donating @ http://kodi.tv/contribute/donate/
 ![Home Default] (https://github.com/braz96/skin.mimic/raw/master/resources/screenshot-01.jpg)
 
 ![Shift View] (https://github.com/braz96/skin.mimic/raw/master/resources/screenshot-06.jpg)
-
 
 
 ***

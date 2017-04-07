@@ -327,6 +327,8 @@
                     <animation effect="slide" end="350,0" time="300" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(8011$SKINSHORTCUTS[id]).Column,0)">Conditional</animation>
                 </control>
                 <control type="image">
+                    <!-- Poster highlight, don't need it -->
+                    <visible>0</visible>
                     <visible>Control.HasFocus(8011$SKINSHORTCUTS[id]) + !Container(8011$SKINSHORTCUTS[id]).IsUpdating + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])</visible>
                     <animation effect="fade" time="320" delay="200">Visible</animation>
                     <animation effect="fade" time="200">Hidden</animation>
@@ -355,7 +357,7 @@
                     <animation effect="slide" end="350,0" time="300" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(8011$SKINSHORTCUTS[id]).Column,1)">Conditional</animation>
                     <animation effect="slide" end="350,0" time="300" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(8011$SKINSHORTCUTS[id]).Column,0)">Conditional</animation>
                 </control>
-                <control type="panel" id="8011$SKINSHORTCUTS[id]">
+                <control type="fixedlist" id="8011$SKINSHORTCUTS[id]">
                     <skinshortcuts>visibility</skinshortcuts>
                     <include content="WidgetContents">
                         <param name="id">8011$SKINSHORTCUTS[id]</param>
@@ -363,8 +365,8 @@
                         <param name="ondown">9000</param>
                         <param name="onleft">8011$SKINSHORTCUTS[id]</param>
                         <param name="onright">8011$SKINSHORTCUTS[id]</param>
-                        <param name="width">1750</param>
-                        <param name="left">85</param>
+                        <param name="width">2200</param>
+                        <param name="left">-155</param>
                         <param name="orientation">horizontal</param>
                     </include>
                     <content limit="$VAR[WidgetLimit]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sortdirection]" target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[path]</content>

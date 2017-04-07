@@ -14,6 +14,7 @@
         </control>
     </include>
     <include name="WidgetContents">
+		<left>-155</left>
         <left>$PARAM[left]</left>
         <width>$PARAM[width]</width>
         <height>780</height>
@@ -27,6 +28,9 @@
         <viewtype label="21371">list</viewtype>
         <scrolltime tween="quadratic" easing="out">300</scrolltime>
         <orientation>$PARAM[orientation]</orientation>
+
+        <focusposition>1</focusposition>
+
         <visible>!IsEmpty(Container(9000).ListItem.Property(widgetPath)) + !String.IsEqual(Container(9000).ListItem.Property(widget),weather) + !String.IsEqual(Container(9000).ListItem.Property(widget),settings)</visible>
         <itemlayout height="390" width="350" condition="[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))">
             <include>ThumbnailItemBackground</include>
@@ -287,7 +291,30 @@
                 <param name="OverlayTop" value="18" />
             </include>
         </focusedlayout>
-        <itemlayout height="390" width="875" condition="Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
+        <itemlayout height="750" width="315" condition="Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
+            <!-- Poster -->
+			<control type="image">
+				<left>-12</left>
+				<top>100</top>
+				<width>340</width>
+				<height>490</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture fallback="DefaultFallback.png" background="true" diffuse="diffuse/shift-poster.png">$VAR[PosterVar]</texture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="image">
+				<left>-12</left>
+				<top>100</top>
+				<width>340</width>
+				<height>490</height>
+				<texture border="5">overlays/diffuse-overlay.png</texture>
+				<bordersize>20</bordersize>
+			</control>
+            <include content="OverlayIcons">
+                <param name="OverlayLeft" value="250" />
+                <param name="OverlayTop" value="118" />
+            </include>
+<!-- Originalish for reference
             <include>ThumbnailItemBackground</include>
             <control type="label">
                 <left>20</left>
@@ -331,8 +358,36 @@
                 <param name="OverlayLeft" value="170" />
                 <param name="OverlayTop" value="18" />
             </include>
+-->
         </itemlayout>
-        <focusedlayout height="390" width="875" condition="Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
+        <focusedlayout height="750" width="315" condition="Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
+            <!-- Poster -->
+			<control type="group">
+                <animation effect="zoom"  center="auto" start="100" end="132" time="400" tween="quadratic" reversible="false">Focus</animation>
+                <animation effect="zoom"  center="auto" start="132" end="100" time="400" tween="quadratic" reversible="false">Unfocus</animation>
+                <control type="image">
+                    <left>-12</left>
+                    <top>100</top>
+                    <width>340</width>
+                    <height>490</height>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture fallback="DefaultFallback.png" background="true" diffuse="diffuse/shift-poster.png">$VAR[PosterVar]</texture>
+                    <bordersize>20</bordersize>
+                </control>
+                <control type="image">
+                    <left>-12</left>
+                    <top>100</top>
+                    <width>340</width>
+                    <height>490</height>
+                    <texture border="5">overlays/diffuse-overlay.png</texture>
+                    <bordersize>20</bordersize>
+                </control>
+                <include content="OverlayIcons">
+                    <param name="OverlayLeft" value="250" />
+                    <param name="OverlayTop" value="118" />
+                </include>
+            </control>
+<!-- Original for reference
             <include>ThumbnailItemBackground</include>
             <control type="label">
                 <left>20</left>
@@ -379,6 +434,7 @@
                 <param name="OverlayLeft" value="170" />
                 <param name="OverlayTop" value="18" />
             </include>
+-->
         </focusedlayout>
     </include>
     <include name="WeatherWidgetContents">

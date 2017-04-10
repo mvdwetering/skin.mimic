@@ -24,6 +24,13 @@
 		<animation effect="fade" time="300">Visible</animation>
 		<animation effect="fade" time="300">Hidden</animation>
 	</include>
+	<include name="ShiftWidgetInfoFade">
+        <animation type="Visible">
+            <effect type="slide" start="170,0" end="0,0" time="300" tween="quadratic" easing="out" reversible="false" />
+            <effect type="fade" time="500" reversible="false" />
+        </animation>
+		<animation effect="fade" time="300" reversible="false">Hidden</animation>
+	</include>
 	<include name="SettingsFadeEffect">
 		<animation effect="fade" time="100" delay="200">Visible</animation>
 		<animation effect="fade" time="50">Hidden</animation>

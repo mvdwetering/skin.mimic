@@ -372,12 +372,11 @@
                     <content limit="$VAR[WidgetLimit]" sortby="$SKINSHORTCUTS[sortby]" sortorder="$SKINSHORTCUTS[sortdirection]" target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[path]</content>
                 </control>
                 <control type="group">
-                    <!-- Left/right arrows, don't really need it. Widget is clear enough about possible navigation options -->
+                    <!-- Left/right arrows -->
                     <include>VisibleFadeEffect</include>
-                    <visible>0</visible>
                     <visible>Control.HasFocus(8011$SKINSHORTCUTS[id]) | Control.HasFocus(8013$SKINSHORTCUTS[id])</visible>
                     <height>30</height>
-                    <top>375</top>
+                    <top>575</top>
                     <left>30</left>
                     <control type="label">
                         <visible>[Control.HasFocus(8011$SKINSHORTCUTS[id]) + Container(8011$SKINSHORTCUTS[id]).HasPrevious] | [Control.HasFocus(8013$SKINSHORTCUTS[id]) + Container(8013$SKINSHORTCUTS[id]).HasPrevious]</visible>
@@ -424,17 +423,15 @@
                     <skinshortcuts>visibility</skinshortcuts>
                     <visible>Integer.IsGreater(Container(8011$SKINSHORTCUTS[id]).NumItems,0) | Control.IsVisible(8012$SKINSHORTCUTS[id]) | Control.IsVisible(8013$SKINSHORTCUTS[id])</visible>
                     <control type="label">
-                        <visible>!Control.HasFocus(9000) + !Control.HasFocus(9010)</visible>
-                        <include>VisibleFadeEffect</include>
-                        <left>330</left>
+                        <visible>!Control.HasFocus(9000) + !Control.HasFocus(9010) + !Container(8011$SKINSHORTCUTS[id]).OnNext + !Container(8011$SKINSHORTCUTS[id]).OnPrevious</visible>
+                        <include>ShiftWidgetInfoFade</include>
+                        <left>340</left>
                         <top>720</top>
                         <width>780</width>
                         <height>40</height>
                         <font>font15_title</font>
-                        <!--<angle>-90</angle>-->
-                        <!--<aligny>top</aligny>-->
-                        <textcolor>$VAR[ColorTextVar]</textcolor>
-                        <label>[LOWERCASE]$INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Label] * $INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Year][/LOWERCASE]</label>
+                        <textcolor>$VAR[ColorMenuVar]</textcolor>
+                        <label>$INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Label] &#8226; $INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Year]</label>
                     </control>
                 </control>
                 <control type="image">

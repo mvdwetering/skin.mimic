@@ -311,8 +311,8 @@
 				<bordersize>20</bordersize>
 			</control>
             <include content="OverlayIcons">
-                <param name="OverlayLeft" value="250" />
-                <param name="OverlayTop" value="118" />
+                <param name="OverlayLeft" value="225" />
+                <param name="OverlayTop" value="465" />
             </include>
 <!-- Originalish for reference
             <include>ThumbnailItemBackground</include>
@@ -363,8 +363,8 @@
         <focusedlayout height="350" width="170" condition="Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
             <!-- Poster -->
 			<control type="group">
-                <animation effect="zoom"  center="200,600" start="100" end="132" time="400" tween="quadratic" reversible="false">Focus</animation>
-                <animation effect="zoom"  center="200,600" start="132" end="100" time="400" tween="quadratic" reversible="false">Unfocus</animation>
+                <animation effect="zoom"  center="200,600" start="100" end="135" time="400" tween="quadratic" reversible="false">Focus</animation>
+                <animation effect="zoom"  center="200,600" start="135" end="100" time="400" tween="quadratic" reversible="false">Unfocus</animation>
                 <control type="image">
                     <left>100</left>
                     <top>450</top>
@@ -383,8 +383,8 @@
                     <bordersize>20</bordersize>
                 </control>
                 <include content="OverlayIcons">
-                    <param name="OverlayLeft" value="170" />
-                    <param name="OverlayTop" value="18" />
+                    <param name="OverlayLeft" value="225" />
+                    <param name="OverlayTop" value="465" />
                 </include>
             </control>
 <!-- Original for reference

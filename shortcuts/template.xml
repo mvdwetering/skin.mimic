@@ -359,7 +359,7 @@
                     <animation effect="slide" end="350,0" time="300" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(8011$SKINSHORTCUTS[id]).Column,1)">Conditional</animation>
                     <animation effect="slide" end="350,0" time="300" tween="cubic" easing="inout" condition="Integer.IsGreater(Container(8011$SKINSHORTCUTS[id]).Column,0)">Conditional</animation>
                 </control>
-                <control type="fixedlist" id="8011$SKINSHORTCUTS[id]">
+                <control type="wraplist" id="8011$SKINSHORTCUTS[id]">
                     <skinshortcuts>visibility</skinshortcuts>
                     <include content="WidgetContents">
                         <param name="id">8011$SKINSHORTCUTS[id]</param>

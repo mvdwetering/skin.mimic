@@ -312,6 +312,8 @@
                 <include>Animation.Common</include>
                 <top>147</top>
                 <control type="image">
+                    <!-- Logo highlight, don't need it -->
+                    <visible>0</visible>
                     <visible>Control.HasFocus(8011$SKINSHORTCUTS[id]) + !Container(8011$SKINSHORTCUTS[id]).IsUpdating + [[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))]</visible>
                     <animation effect="fade" time="320" delay="200">Visible</animation>
                     <animation effect="fade" time="200">Hidden</animation>
@@ -427,11 +429,11 @@
                         <include>ShiftWidgetInfoFade</include>
                         <left>340</left>
                         <top>720</top>
-                        <width>780</width>
+                        <width>1080</width>
                         <height>40</height>
                         <font>font15_title</font>
                         <textcolor>$VAR[ColorMenuVar]</textcolor>
-                        <label>$INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Label] &#8226; $INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Year]</label>
+                        <label>$INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Label] &#8226; $INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Year] / $INFO[Container(9000).ListItem.Property(widgetIcon)]</label>
                     </control>
                 </control>
                 <control type="image">

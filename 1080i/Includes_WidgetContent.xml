@@ -32,7 +32,31 @@
         <focusposition>1</focusposition>
 
         <visible>!IsEmpty(Container(9000).ListItem.Property(widgetPath)) + !String.IsEqual(Container(9000).ListItem.Property(widget),weather) + !String.IsEqual(Container(9000).ListItem.Property(widget),settings)</visible>
-        <itemlayout height="390" width="350" condition="[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))">
+        <itemlayout height="350" width="255" condition="[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))">
+            <!-- Thumbnail -->
+			<control type="image">
+				<left>0</left>
+				<top>450</top>
+				<width>288</width>
+				<height>288</height>
+				<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+				<texture fallback="DefaultFolder.png" background="true" diffuse="diffuse/thumbnail.png">$VAR[WidgetArt]</texture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>450</top>
+				<width>288</width>
+				<height>288</height>
+				<texture border="5">overlays/diffuse-overlay.png</texture>
+				<bordersize>20</bordersize>
+			</control>
+            <include content="OverlayIcons">
+                <param name="OverlayLeft" value="225" />
+                <param name="OverlayTop" value="465" />
+            </include>
+
+            <!-- Original for temp reference
             <include>ThumbnailItemBackground</include>
             <control type="label">
                 <left>20</left>
@@ -56,12 +80,37 @@
                 <height>310</height>
                 <texture border="5">overlays/diffuse-overlay.png</texture>
             </control>
-            <include content="OverlayIcons">
-                <param name="OverlayLeft" value="272" />
-                <param name="OverlayTop" value="18" />
-            </include>
+            -->
         </itemlayout>
-        <focusedlayout height="390" width="350" condition="[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))">
+        <focusedlayout height="350" width="255" condition="[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))">
+            <!-- Thumbnail -->
+			<control type="group">
+                <animation effect="zoom"  center="200,600" start="100" end="135" time="400" tween="quadratic" reversible="false">Focus</animation>
+                <animation effect="zoom"  center="200,600" start="135" end="100" time="400" tween="quadratic" reversible="false">Unfocus</animation>
+                <control type="image">
+                    <left>0</left>
+                    <top>450</top>
+                    <width>288</width>
+                    <height>288</height>
+                    <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+                    <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/thumbnail.png">$VAR[WidgetArt]</texture>
+                    <bordersize>20</bordersize>
+                </control>
+                <control type="image">
+                    <left>0</left>
+                    <top>450</top>
+                    <width>288</width>
+                    <height>288</height>
+                    <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+                    <texture border="5">overlays/diffuse-overlay.png</texture>
+                    <bordersize>20</bordersize>
+                </control>
+                <include content="OverlayIcons">
+                    <param name="OverlayLeft" value="225" />
+                    <param name="OverlayTop" value="465" />
+                </include>
+            </control>
+<!-- Original for temp reference
             <include>ThumbnailItemBackground</include>
             <control type="label">
                 <left>20</left>
@@ -91,8 +140,10 @@
                 <param name="OverlayLeft" value="272" />
                 <param name="OverlayTop" value="18" />
             </include>
+            -->
         </focusedlayout>
         <itemlayout height="260" width="350" condition="String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20445]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31088]) | [String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + [String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]]">
+            <!-- Fanart, Logo, Landscape -->
             <control type="image">
                 <left>10</left>
                 <top>10</top>
@@ -145,6 +196,7 @@
             </include>
         </itemlayout>
         <focusedlayout height="260" width="350" condition="String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20445]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31088]) | [String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + [String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]]">
+
             <control type="image">
                 <left>10</left>
                 <top>10</top>

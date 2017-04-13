@@ -31,8 +31,13 @@
             <effect type="fade" time="500" reversible="false" />
         </animation>
         <animation type="Visible" condition="String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))" >
-            <!-- Thumbnail or Empty, not different start/end to have proper alignment in the end for different WidgetIcon sizes -->
+            <!-- Thumbnail or Empty, note different start/end to have proper alignment in the end for different WidgetIcon sizes -->
             <effect type="slide" start="240,0" end="70,0" time="300" tween="quadratic" easing="out" reversible="false" />
+            <effect type="fade" time="500" reversible="false" />
+        </animation>
+        <animation type="Visible" condition="String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20445]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31088]) | [String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + [String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes)| String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]]" >
+            <!--  Fanart, Logo, Landscape, note different start/end to have proper alignment in the end for different WidgetIcon sizes -->
+            <effect type="slide" start="415,0" end="245,0" time="300" tween="quadratic" easing="out" reversible="false" />
             <effect type="fade" time="500" reversible="false" />
         </animation>
 		<animation effect="fade" time="300" reversible="false">Hidden</animation>

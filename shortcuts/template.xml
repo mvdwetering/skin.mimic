@@ -426,16 +426,49 @@
                     <!-- Selected item info like name, year -->
                     <skinshortcuts>visibility</skinshortcuts>
                     <visible>Integer.IsGreater(Container(8011$SKINSHORTCUTS[id]).NumItems,0) | Control.IsVisible(8012$SKINSHORTCUTS[id]) | Control.IsVisible(8013$SKINSHORTCUTS[id])</visible>
-                    <control type="label">
+                    <control type="grouplist">
                         <visible>!Control.HasFocus(9000) + !Control.HasFocus(9010) + !Container(8011$SKINSHORTCUTS[id]).OnNext + !Container(8011$SKINSHORTCUTS[id]).OnPrevious</visible>
                         <include>ShiftWidgetInfoFade</include>
+                        <orientation>horizontal</orientation>
                         <left>340</left>
                         <top>720</top>
-                        <width>1080</width>
                         <height>40</height>
-                        <font>font15_title</font>
-                        <textcolor>$VAR[ColorMenuVar]</textcolor>
-                        <label>$INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Label] &#8226; $INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Year] / $INFO[Container(9000).ListItem.Property(widgetIcon)]</label>
+                        <width>auto</width>
+
+                        <control type="label">
+                            <top>0</top>
+                            <width>auto</width>
+                            <height>40</height>
+                            <font>font15_title</font>
+                            <textcolor>$VAR[ColorMenuVar]</textcolor>
+                            <label>$INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Season,,x]$INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Episode,,. ]</label>
+                        </control>
+                        <control type="label">
+                            <top>0</top>
+                            <width>auto</width>
+                            <height>40</height>
+                            <font>font15_title</font>
+                            <textcolor>$VAR[ColorMenuVar]</textcolor>
+                            <label>$INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Label]</label>
+                        </control>
+                        <control type="label">
+                            <visible>!String.IsEmpty(Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Year)</visible>
+                            <top>0</top>
+                            <width>auto</width>
+                            <height>40</height>
+                            <font>font15_title</font>
+                            <textcolor>$VAR[ColorMenuVar]</textcolor>
+                            <label> &#8226; $INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Year]</label>
+                        </control>
+                        <control type="label">
+                            <visible>!String.IsEmpty(Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Premiered)</visible>
+                            <top>0</top>
+                            <width>auto</width>
+                            <height>40</height>
+                            <font>font15_title</font>
+                            <textcolor>$VAR[ColorMenuVar]</textcolor>
+                            <label> &#8226; $INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Premiered]</label>
+                        </control>
                     </control>
                 </control>
                 <control type="image">

@@ -162,7 +162,7 @@
 				<bordersize>20</bordersize>
 			</control>
             <include content="OverlayIcons">
-                <param name="OverlayLeft" value="315" />
+                <param name="OverlayLeft" value="270" />
                 <param name="OverlayTop" value="465" />
             </include>
 <!-- Original for temp reference
@@ -242,7 +242,7 @@
                     <bordersize>20</bordersize>
                 </control>
                 <include content="OverlayIcons">
-                    <param name="OverlayLeft" value="315" />
+                    <param name="OverlayLeft" value="270" />
                     <param name="OverlayTop" value="465" />
                 </include>
             </control>

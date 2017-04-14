@@ -436,6 +436,7 @@
                         <width>auto</width>
 
                         <control type="label">
+                            <visible>!String.IsEmpty(Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Season)</visible>
                             <top>0</top>
                             <width>auto</width>
                             <height>40</height>
@@ -452,7 +453,17 @@
                             <label>$INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Label]</label>
                         </control>
                         <control type="label">
-                            <visible>!String.IsEmpty(Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Year)</visible>
+                            <visible>!String.IsEmpty(Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).TVShowTitle)</visible>
+                            <top>0</top>
+                            <width>auto</width>
+                            <height>40</height>
+                            <font>font15_title</font>
+                            <textcolor>$VAR[ColorMenuVar]</textcolor>
+                            <label> &#8226; $INFO[Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).TVShowTitle]</label>
+                        </control>
+                        <control type="label">
+                            <!-- Don't show Year for TV shows -->
+                            <visible>String.IsEmpty(Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).TVShowTitle) + !String.IsEmpty(Container(8011$SKINSHORTCUTS[id]).ListItem(Container(8011$SKINSHORTCUTS[id]).CurrentItem).Year)</visible>
                             <top>0</top>
                             <width>auto</width>
                             <height>40</height>

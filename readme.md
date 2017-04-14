@@ -1,20 +1,38 @@
-***
-This version contains mods for the homescreen to make it look more like the previous version on Jarvis.
-Even though I really like the media views of Mimic I am not a fan of the homescreen changes with Mimic 5.
+About the mods
+--------------
+This version contains mods for the homescreen to make it look more like the previous version 
+on Jarvis. Even though I really like the media views of Mimic I am not a fan of the 
+homescreen changes with Mimic 5.
 
-Things to change or improve
-* Add a Shift view for the home screen
-  * Does not cover the background fanart as much as the new widgets
-  * Does not have the weird looking boxes
+* Double height widgets are not my cup of tea
+  * Cover too much of fanart, I like to see more if it on the homescreen
+  * Navigation is a bit weird (pressing up skips a row)
+* I like to see the posters of movies/tvshows
+* New poster view
+  * It has really wide widgets so only a few items fit on screen. 
+  I like to see more to easier pick something to watch.
+  * It has plot on it, which regularly has spoilers and lots of text does not really look nice
+* The other views with Poster icons have weird aspect ratio / blackbars in the boxes
 
-***
+All in all I miss my Shift widget on the homescreen.
+So this mod kinda restores the Shift widget (I say kinda because I lack the design capabilities to make it look awesome).
+
+![Shift Widget] (https://github.com/mvdwetering/skin.mimic/raw/home_shiftview/mimic_mods_homescreen.jpg)
+
+Known issues
+------------
+These mods are only intended for a horizontal menu and it seems that in the 
+process I broke the vertical menu :-(
+
+
+Original readme
+---------------
+
 
 ![banner] (http://i.imgur.com/VfxG5Nw.jpg)
 <h1>mim·ic</h1>
 <code>1. To imitate</code><br />
 <code>Synonyms: resemble, look like, have the appearance of</code>
-
- This version contains modes for the homescreen to make it look more like the previous version on Jarvis.
 
 As its name implies, this skin owes much to the Kodi community. In no particular order, I'd like to thank the following individuals:
 

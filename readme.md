@@ -17,7 +17,7 @@ homescreen changes with Mimic 5.
 All in all I miss my Shift widget on the homescreen.
 So this mod kinda restores the Shift widget (I say kinda because I lack the design capabilities to make it look awesome).
 
-![Shift Widget] (https://github.com/mvdwetering/skin.mimic/raw/master/mimic_mods_homescreen.jpg)
+![Shift Widget] (https://github.com/mvdwetering/skin.mimic/raw/home_shiftview/mimic_mods_homescreen.jpg)
 
 Known issues
 ------------

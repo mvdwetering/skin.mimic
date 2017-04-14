@@ -55,32 +55,6 @@
                 <param name="OverlayLeft" value="225" />
                 <param name="OverlayTop" value="465" />
             </include>
-
-            <!-- Original for temp reference
-            <include>ThumbnailItemBackground</include>
-            <control type="label">
-                <left>20</left>
-                <right>20</right>
-                <top>327</top>
-                <height>50</height>
-                <label>$VAR[WidgetThumbnailLabel]</label>
-            </control>
-            <control type="image">
-                <left>20</left>
-                <top>20</top>
-                <right>20</right>
-                <height>310</height>
-                <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
-                <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/thumbnail.png">$VAR[WidgetArt]</texture>
-            </control>
-            <control type="image">
-                <top>20</top>
-                <left>20</left>
-                <right>20</right>
-                <height>310</height>
-                <texture border="5">overlays/diffuse-overlay.png</texture>
-            </control>
-            -->
         </itemlayout>
         <focusedlayout height="350" width="255" condition="[String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + ![String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]] | String.IsEmpty(Container(9000).ListItem.Property(widgetIcon))">
             <!-- Thumbnail -->
@@ -110,37 +84,6 @@
                     <param name="OverlayTop" value="465" />
                 </include>
             </control>
-<!-- Original for temp reference
-            <include>ThumbnailItemBackground</include>
-            <control type="label">
-                <left>20</left>
-                <right>20</right>
-                <top>327</top>
-                <height>50</height>
-                <label>$VAR[WidgetThumbnailLabel]</label>
-            </control>
-            <control type="image">
-                <left>20</left>
-                <top>20</top>
-                <right>20</right>
-                <height>310</height>
-                <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
-                <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/thumbnail.png">$VAR[WidgetArt]</texture>
-            </control>
-            <control type="image">
-                <animation center="auto" condition="Control.HasFocus($PARAM[id])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-                <animation center="auto" condition="Control.HasFocus($PARAM[id])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-                <top>20</top>
-                <left>20</left>
-                <right>20</right>
-                <height>310</height>
-                <texture border="5">overlays/diffuse-overlay.png</texture>
-            </control>
-            <include content="OverlayIcons">
-                <param name="OverlayLeft" value="272" />
-                <param name="OverlayTop" value="18" />
-            </include>
-            -->
         </focusedlayout>
         <itemlayout height="350" width="360" condition="String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20445]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31088]) | [String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + [String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]]">
             <!-- Fanart, Logo, Landscape -->
@@ -165,58 +108,6 @@
                 <param name="OverlayLeft" value="270" />
                 <param name="OverlayTop" value="465" />
             </include>
-<!-- Original for temp reference
-            <control type="image">
-                <left>10</left>
-                <top>10</top>
-                <right>10</right>
-                <bottom>10</bottom>
-                <texture colordiffuse="33787878" border="5">listselect_fo.png</texture>
-            </control>
-            <control type="image">
-                <left>20</left>
-                <top>20</top>
-                <right>20</right>
-                <height>180</height>
-                <texture colordiffuse="$VAR[ColorBackgroundVar]" border="5">thumbnail_bg.png</texture>
-            </control>
-            <control type="label">
-                <left>20</left>
-                <right>20</right>
-                <top>197</top>
-                <height>50</height>
-                <label>$VAR[WidgetThumbnailLabel]</label>
-            </control>
-            <control type="image">
-                <visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
-                <left>20</left>
-                <top>20</top>
-                <right>20</right>
-                <height>180</height>
-                <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
-                <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/fanart-widget.png">$VAR[WidgetArt]</texture>
-            </control>
-            <control type="image">
-                <visible>String.IsEmpty(ListItem.Art(fanart))</visible>
-                <left>20</left>
-                <top>20</top>
-                <right>20</right>
-                <height>180</height>
-                <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
-                <texture background="true" fallback="DefaultFolder.png">$VAR[WidgetArt]</texture>
-            </control>
-            <control type="image">
-                <top>20</top>
-                <left>20</left>
-                <right>20</right>
-                <height>180</height>
-                <texture border="5">overlays/diffuse-overlay.png</texture>
-            </control>
-            <include content="OverlayIcons">
-                <param name="OverlayLeft" value="272" />
-                <param name="OverlayTop" value="18" />
-            </include>
-            -->
         </itemlayout>
         <focusedlayout height="350" width="360" condition="String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20445]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31100]) | String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[31088]) | [String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[21371]) + [String.Contains(Container(9000).ListItem.Property(widgetPath),recentlyaddedepisodes) | String.Contains(Container(9000).ListItem.Property(widgetType),episodes)]]">
             <!-- Fanart, Logo, Landscape -->
@@ -246,60 +137,6 @@
                     <param name="OverlayTop" value="465" />
                 </include>
             </control>
-<!-- Original for temp reference
-            <control type="image">
-                <left>10</left>
-                <top>10</top>
-                <right>10</right>
-                <bottom>10</bottom>
-                <texture colordiffuse="33787878" border="5">listselect_fo.png</texture>
-            </control>
-            <control type="image">
-                <left>20</left>
-                <top>20</top>
-                <right>20</right>
-                <height>180</height>
-                <texture colordiffuse="$VAR[ColorBackgroundVar]" border="5">thumbnail_bg.png</texture>
-            </control>
-            <control type="label">
-                <left>20</left>
-                <right>20</right>
-                <top>197</top>
-                <height>50</height>
-                <label>$VAR[WidgetThumbnailLabel]</label>
-            </control>
-            <control type="image">
-                <visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
-                <left>20</left>
-                <top>20</top>
-                <right>20</right>
-                <height>180</height>
-                <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
-                <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/fanart-widget.png">$VAR[WidgetArt]</texture>
-            </control>
-            <control type="image">
-                <visible>String.IsEmpty(ListItem.Art(fanart))</visible>
-                <left>20</left>
-                <top>20</top>
-                <right>20</right>
-                <height>180</height>
-                <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
-                <texture background="true" fallback="DefaultFolder.png">$VAR[WidgetArt]</texture>
-            </control>
-            <control type="image">
-                <animation center="auto" condition="Control.HasFocus($PARAM[id])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-                <animation center="auto" condition="Control.HasFocus($PARAM[id])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-                <top>20</top>
-                <left>20</left>
-                <right>20</right>
-                <height>180</height>
-                <texture border="5">overlays/diffuse-overlay.png</texture>
-            </control>
-            <include content="OverlayIcons">
-                <param name="OverlayLeft" value="272" />
-                <param name="OverlayTop" value="18" />
-            </include>
-            -->
         </focusedlayout>
         <itemlayout height="390" width="700" condition="!Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
             <include>ThumbnailItemBackground</include>
@@ -417,51 +254,6 @@
                 <param name="OverlayLeft" value="225" />
                 <param name="OverlayTop" value="465" />
             </include>
-<!-- Originalish for reference
-            <include>ThumbnailItemBackground</include>
-            <control type="label">
-                <left>20</left>
-                <right>20</right>
-                <top>327</top>
-                <height>50</height>
-                <label>$VAR[WidgetThumbnailLabel]</label>
-            </control>
-            <control type="label">
-                <left>20</left>
-                <right>20</right>
-                <top>327</top>
-                <height>50</height>
-                <align>right</align>
-                <label>$VAR[WidgetThumbnailLabel2]</label>
-            </control>
-            <control type="image">
-                <left>20</left>
-                <top>20</top>
-                <width>208</width>
-                <height>310</height>
-                <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
-                <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/poster-widget.png">$VAR[WidgetArt]</texture>
-            </control>
-            <control type="textbox">
-                <left>250</left>
-                <top>30</top>
-                <width>590</width>
-                <height>290</height>
-                <font>font13_widget</font>
-                <label>$VAR[VideoInfoPlotVar]</label>
-            </control>
-            <control type="image">
-                <top>20</top>
-                <left>20</left>
-                <right>20</right>
-                <height>310</height>
-                <texture border="5">overlays/diffuse-overlay.png</texture>
-            </control>
-            <include content="OverlayIcons">
-                <param name="OverlayLeft" value="170" />
-                <param name="OverlayTop" value="18" />
-            </include>
--->
         </itemlayout>
         <focusedlayout height="350" width="170" condition="Skin.HasSetting(Enable.HorizontalMenu) + String.IsEqual(Container(9000).ListItem.Property(widgetIcon),$LOCALIZE[20021])">
             <!-- Poster -->
@@ -490,54 +282,6 @@
                     <param name="OverlayTop" value="465" />
                 </include>
             </control>
-<!-- Original for reference
-            <include>ThumbnailItemBackground</include>
-            <control type="label">
-                <left>20</left>
-                <right>20</right>
-                <top>327</top>
-                <height>50</height>
-                <label>$VAR[WidgetThumbnailLabel]</label>
-            </control>
-            <control type="label">
-                <left>20</left>
-                <right>20</right>
-                <top>327</top>
-                <height>50</height>
-                <align>right</align>
-                <label>$VAR[WidgetThumbnailLabel2]</label>
-            </control>
-            <control type="image">
-                <left>20</left>
-                <top>20</top>
-                <width>208</width>
-                <height>310</height>
-                <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
-                <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/poster-widget.png">$VAR[WidgetArt]</texture>
-            </control>
-            <control type="textbox">
-                <left>250</left>
-                <top>30</top>
-                <width>590</width>
-                <height>290</height>
-                <font>font13_widget</font>
-                <label>$VAR[VideoInfoPlotVar]</label>
-                <include>AutoscrollDefault</include>
-            </control>
-            <control type="image">
-                <animation center="auto" condition="Control.HasFocus($PARAM[id])" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
-                <animation center="auto" condition="Control.HasFocus($PARAM[id])" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>
-                <top>20</top>
-                <left>20</left>
-                <right>20</right>
-                <height>310</height>
-                <texture border="5">overlays/diffuse-overlay.png</texture>
-            </control>
-            <include content="OverlayIcons">
-                <param name="OverlayLeft" value="170" />
-                <param name="OverlayTop" value="18" />
-            </include>
--->
         </focusedlayout>
     </include>
     <include name="WeatherWidgetContents">
